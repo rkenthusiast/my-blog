@@ -51,6 +51,8 @@ $ composer install
 $ npm install
 ```
 
+After npm, install blog core plugin via https://github.com/rkenthusiast/blog-core
+
 ###  Note: There seems to be a bug to register custom gutenberg block, need to test on version (6.6-alpha-58311)
 
 ### Available CLI commands
