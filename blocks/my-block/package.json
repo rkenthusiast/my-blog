@@ -1,0 +1,17 @@
+{
+    "name": "myblog",
+    "version": "1.0.0",
+    "description": "A custom block for my theme",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "build": "wp-scripts build",
+        "start": "wp-scripts start"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.24.6",
+        "@babel/preset-env": "^7.24.6",
+        "@wordpress/scripts": "^23.0.0",
+        "babel-loader": "^9.1.3"
+    }
+}

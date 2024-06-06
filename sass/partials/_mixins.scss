@@ -1,0 +1,223 @@
+// Mixins for common CSS styles
+
+// Flexbox Centering
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Text Truncation
+@mixin text-truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// Clearfix
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Hide Element
+@mixin hide {
+    display: none;
+}
+
+// Responsive Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin screen-size-sm {
+    @media (min-width: $breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin screen-size-md {
+    @media (min-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin screen-size-lg {
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin screen-size-xl {
+    @media (min-width: $breakpoint-xl) {
+        @content;
+    }
+}
+
+// Placeholder Styling
+@mixin placeholder {
+    &::placeholder {
+        @content;
+    }
+}
+
+// Button Styling
+@mixin button($color: #fff, $background: #007bff, $padding: 10px 20px, $border-radius: 5px, $border: none, $cursor: pointer) {
+    color: $color;
+    background-color: $background;
+    padding: $padding;
+    border-radius: $border-radius;
+    border: $border;
+    cursor: $cursor;
+}
+
+// Transition
+@mixin transition($property, $duration, $timing: ease) {
+    transition: $property $duration $timing;
+}
+
+// Box Shadow
+@mixin box-shadow($value) {
+    box-shadow: $value;
+}
+
+// Placeholder for CSS Grid
+@mixin grid($columns, $gap: 1rem) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: $gap;
+}
+
+// Flexbox Row
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+// Flexbox Column
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// Text Ellipsis
+@mixin text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// Background Image
+@mixin background-image($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+}
+
+// Border Radius
+@mixin border-radius($value) {
+    border-radius: $value;
+}
+
+// Font Size
+@mixin font-size($size) {
+    font-size: $size;
+}
+
+// Line Height
+@mixin line-height($height) {
+    line-height: $height;
+}
+
+// Text Color
+@mixin text-color($color) {
+    color: $color;
+}
+
+// Text Alignment
+@mixin text-align($align) {
+    text-align: $align;
+}
+
+// Overflow Hidden
+@mixin overflow-hidden {
+    overflow: hidden;
+}
+
+// Overflow Auto
+@mixin overflow-auto {
+    overflow: auto;
+}
+
+// Position Center
+@mixin position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Z-Index
+@mixin z-index($index) {
+    z-index: $index;
+}
+
+// Opacity
+@mixin opacity($value) {
+    opacity: $value;
+}
+
+// Cursor Pointer
+@mixin cursor-pointer {
+    cursor: pointer;
+}
+
+// Box Sizing Border Box
+@mixin box-sizing-border-box {
+    box-sizing: border-box;
+}
+
+// User Select None
+@mixin user-select-none {
+    user-select: none;
+}
+
+// Outline None
+@mixin outline-none {
+    outline: none;
+}
+
+// Text Decoration None
+@mixin text-decoration-none {
+    text-decoration: none;
+}
+
+// List Style None
+@mixin list-style-none {
+    list-style: none;
+}
+
+@mixin toRem($pxValue) {
+    $baseFontSize: 16px; // Define your base font size here (usually 16px)
+    $remValue: calc($pxValue / $baseFontSize);
+    font-size: $remValue + rem;
+}
+
+@mixin title-with-border {
+    padding: 30px;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -30px;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: radial-gradient(ellipse at left, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+}

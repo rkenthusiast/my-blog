@@ -1,0 +1,63 @@
+body.single {
+    color: $primary-text-color;
+
+    main {
+        @include flex-column;
+        gap: 20px;
+        max-width: $single-container-width;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .posts {
+
+        &__card {
+            @include flex-column;
+            border-radius: unset;
+            padding: unset;
+            max-width: unset;
+            box-shadow: unset;
+
+            &__img {
+                order: 5;
+            }
+
+            &__author {
+                width: 100%;
+
+                img {
+                    height: 28px;
+                    width: 28px;
+                }
+
+                h3 {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            &__tag {
+                background-color: $primary-color;
+                color: $primary-text-color;
+            }
+        }
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 32px;
+        color: #BABABF;
+    }
+
+    a {
+        color: $primary-text-color;
+    }
+}

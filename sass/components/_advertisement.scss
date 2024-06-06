@@ -1,0 +1,32 @@
+.advertisement {
+    width: 100%;
+    padding-block: 40px;
+
+    &__box {
+        @include flex-column;
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+        background-color: $color-type-1;
+        border-radius: 12px;
+        text-align: center;
+        color: $text-color-type-4;
+        padding-block: 15px;
+    }
+
+    h4 {
+        font-size: $font-size-small;
+        line-height: 20px;
+    }
+
+    p {
+        font-size: $font-size-large;
+        line-height: 24px;
+        font-weight: $font-weight-bold;
+    }
+
+    span {
+        font-size: 1.125rem;
+        line-height: 26px;
+    }
+}

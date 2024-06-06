@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "myprefix/richtext-supports",
+  "title": "RichText Supports",
+  "icon": "lightbulb",
+  "category": "text",
+  "description": "Test's various `supports` properties",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2",
+      "default": ""
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "_comment-1": "// Adds the anchor field to the Advanced panel in the block inspector",
+    "align": true,
+    "background": {
+      "backgroundImage": true
+    },
+    "className": false,
+    "_comment-2": "// Removes the automatic classname from the block's wrapper tag on the front-end e.g. .wp-block-your-block-name",
+    "_comment-3": "// This is for block alignment (not text alignment)",
+    "color": {
+      "gradient": false,
+      "background": true,
+      "text": true,
+      "link": false
+    },
+    "_comment-4": "// Adds colour pickers to the block inspector (WP 5.6), Supports background, text and gradient. Adding support for gradient, as done here, also adds support for background and text colours because `color` is `true` if it contains a non-empty object. see https://developer.wordpress.org/block-editor/developers/block-api/block-supports/#color*/",
+    "customClassName": false,
+    "_comment-5": "// Remove the classname field from the Advanced panel in the block inspector",
+    "dimensions": {
+      "minHeight": true
+    },
+    "html": false,
+    "_comment-6": "// Prevents Edit HTML in `...` menu",
+    "multiple": true,
+    "_comment-7": "// False only allows on of this block in each post",
+    "position": {
+      "sticky": true
+    },
+    "typography": {
+      "fontSize": true,
+      "_comment-8": "// Adds a drop down to the Block Inspector WP 5.6",
+      "lineHeight": true,
+      "_comment-9": "// Adds a control to Block Inspector WP 5.6, this needs theme support, see the PHP file"
+    },
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "_comment-10": "// Enable margin UI control.",
+      "padding": true,
+      "_comment-11": "// Enable padding UI control."
+    },
+    "lock": true
+  },
+  "editorScript": "file:./index.js"
+}
