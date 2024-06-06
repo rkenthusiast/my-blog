@@ -51,6 +51,8 @@ $ composer install
 $ npm install
 ```
 
+###  Note: There seems to be a bug to register custom gutenberg block, need to test on version (6.6-alpha-58311)
+
 ### Available CLI commands
 
 `_s` comes packed with CLI commands tailored for WordPress theme development :
