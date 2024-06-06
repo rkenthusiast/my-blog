@@ -187,46 +187,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
-
-
-
-
-// function your_theme_register_block() {
-//     // Register block script
-//     wp_register_script(
-//         'your-theme-block-editor-script',
-//         get_template_directory_uri() . '/blocks/my-block/src/index.js',
-//         array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n' ),
-//         filemtime( get_template_directory() . '/blocks/my-block/src/index.js' )
-//     );
-
-//     // Register block styles
-//     wp_register_style(
-//         'your-theme-block-style',
-//         get_template_directory_uri() . '/blocks/my-block/src/style.css',
-//         array(),
-//         filemtime( get_template_directory() . '/blocks/my-block/src/style.css' )
-//     );
-
-//     wp_register_style(
-//         'your-theme-block-editor-style',
-//         get_template_directory_uri() . '/blocks/my-block/src/editor.css',
-//         array(),
-//         filemtime( get_template_directory() . '/blocks/my-block/src/editor.css' )
-//     );
-
-//     // Register block
-//     register_block_type( 'myblog/my-block', array(
-//         'editor_script' => 'your-theme-block-editor-script',
-//         'style'         => 'your-theme-block-style',
-//         'editor_style'  => 'your-theme-block-editor-style',
-//     ) );
-// }
-// add_action( 'init', 'your_theme_register_block' );
-
-
-
 // Register footer widget area
 function theme_register_footer_widget_area() {
     register_sidebar( array(
